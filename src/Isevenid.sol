@@ -24,11 +24,11 @@ contract Isevenid {
     // Fungsi untuk memperbarui profil (hanya pemilik)
     function updateProfile(string memory _newName, string memory _newBio, string memory _newPortfolioLink) public {
         require(msg.sender == owner, "Hanya pemilik yang dapat mengupdate profil");
-        
+
         name = _newName;
         bio = _newBio;
         portfolioLink = _newPortfolioLink;
-        
+
         emit ProfileUpdated(_newName, _newBio);
     }
 }

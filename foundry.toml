@@ -3,4 +3,15 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+# --- TAMBAHKAN DI BAWAH INI ---
+
+[rpc_endpoints]
+# Menambahkan RPC Endpoint untuk Base Sepolia (Testnet)
+base_sepolia = "https://api.developer.coinbase.com/rpc/v1/base-sepolia/TZBrP51wr1XnYVyDXD16zVFtJzjm4ZpR"
+# Menambahkan RPC Endpoint untuk Base Mainnet
+base = "https://api.developer.coinbase.com/rpc/v1/base/TZBrP51wr1XnYVyDXD16zVFtJzjm4ZpR"
+
+[profile.transaction_properties]
+# Anda bisa membiarkan gas_limit diatur otomatis oleh node,
+# atau menentukannya secara manual jika perlu.
+# gas_limit = 30000000 

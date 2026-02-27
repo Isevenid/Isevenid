@@ -32,7 +32,7 @@ contract IsevenidTest is Test {
         // Berpura-pura menjadi hacker
         vm.prank(hacker);
         vm.expectRevert("Hanya pemilik yang dapat mengupdate profil");
-        
+
         // Ini seharusnya gagal karena hacker bukan pemilik
         isevenidProfile.updateProfile("Hacked", "Hacked Bio", "hacked.com");
     }
