@@ -35,4 +35,10 @@ jobs:
         run: forge build --sizes
 
       - name: Run Forge tests
+        # --- PERUBAHAN DI SINI ---
         run: forge test -vvv
+        env:
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          RPC_URL: ${{ secrets.RPC_URL }}
+        # -------------------------
+        
